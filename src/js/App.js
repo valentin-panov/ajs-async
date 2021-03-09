@@ -7,6 +7,6 @@ export default (async () => {
     const result = new GameSaving(response);
     return result;
   } catch (err) {
-    throw new Error(err.message);
+    return Promise.reject(err);
   }
 })();
